@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/board">
+
+    <View
+        android:id="@+id/outer"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:background="@layout/rectangle"/>
+
+
+    <View
+        android:id="@+id/middle"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_centerInParent="true"
+        android:background="@layout/rectangle"/>
+
+    <View
+        android:id="@+id/inner"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:background="@layout/rectangle"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/horizontal_line"
+        android:layout_toLeftOf="@+id/inner"
+        android:layout_centerInParent="true"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/horizontal_line"
+        android:layout_toRightOf="@+id/inner"
+        android:layout_centerInParent="true"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/vertical_line"
+        android:layout_alignTop="@+id/outer"
+        android:layout_centerHorizontal="true"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/vertical_line"
+        android:layout_alignBottom="@+id/outer"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
